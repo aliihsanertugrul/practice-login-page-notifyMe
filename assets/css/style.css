@@ -1,0 +1,113 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: url("../img/bg.jpg") black no-repeat center center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2a5555;
+    opacity: 0.7;
+  }
+  
+  .page {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  @media (min-width: 992px) {
+    .page {
+      height: 100%;
+      width: 75%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .page {
+      width: 65%;
+    }
+  }
+  
+  .page::before {
+    content: "";
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  @media (min-width: 992px) {
+    .page::before {
+      transform: skewX(-7deg);
+      -webkit-transform: skewX(-7deg);
+      -moz-transform: skewX(-7deg);
+      -ms-transform: skewX(-7deg);
+      -o-transform: skewX(-7deg);
+      transform-origin: top right;
+    }
+  }
+  
+  @media (min-width: 992px) {
+      .page .page-content{
+          margin-right: 150px;
+          width: 60%;
+      }
+  }
+  
+  .page .page-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .page .page-content button{
+      background-color: #2a5555;
+      border-color: #2a5555;
+  }
+  
+  
+  .page .page-content input:focus{
+      color: #2a5555;
+      border-color: #59b3b3;
+  
+      box-shadow: 0 0 3px #59b3b3;
+  
+  }
+  
+  .social-icons {
+    position: relative;
+    z-index: 2;
+  }
+  
+  @media (min-width: 992px) {
+      .social-icons{
+          position: absolute;
+          top:50%;
+          right:50px;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+  }
+  }
+  
+  
+  .social-icons .btn {
+    width: 4rem;
+    height: 4rem;
+  }
